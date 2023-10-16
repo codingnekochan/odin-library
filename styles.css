@@ -1,0 +1,225 @@
+/* font-family:;
+font-family: 'Poppins', sans-serif; */
+/* background: rgb(0,230,126);
+background: linear-gradient(135deg, rgba(0,230,126,1) 0%, rgba(0,153,84,1) 25%, rgba(0,69,38,1) 63%, rgba(0,26,14,1) 100%); */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%
+}
+body{
+    display: flex;
+    font-family:  'Open Sans', sans-serif;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    position:relative;
+    color: rgb(0, 28, 16);
+    background-color: rgb(255, 255, 255);
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1{
+    margin:1.5rem 0 1.5rem 3rem;
+}
+h1,
+h2{
+    
+    color:rgb(0, 28, 16);
+    font-size: 4rem
+}
+h2{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+button{
+    border: none;
+    font-family:  'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height:15vh;
+    background: rgb(0,230,126);
+    background: linear-gradient(150deg, rgba(0,230,126,1) 0%, rgba(0,153,84,1) 25%, rgba(0,69,38,1) 63%, rgba(0,26,14,1) 100%); 
+    padding: 2rem 4rem 2rem 3rem ;
+}
+.logo{
+    display:flex;
+    height:100%;
+    align-items: center
+}
+.logo_text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.8rem;
+    color:rgb(255, 255, 255);
+    line-height: 150%;
+}
+.logo_img{
+    width:50px;
+    height: 50px;
+    position: relative;
+    bottom: 5%;
+}
+.no_book--alert{
+    font-size: 2rem;
+    font-weight: 700;
+    color:rgb(255, 255, 255);
+}
+.create_button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 12px;
+    height: 48px;
+    width: 144px;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    background:rgb(0, 230, 118);
+}
+.create_button:hover,
+.toggle_read:hover,
+.delete_btn:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+.add_icon{
+    width:16px;
+}
+.book_shelf{
+    width:100%;
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    padding: 2rem 5rem;
+}
+.book{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.book_cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    width: 200px;
+    height: 300px;
+    padding: 2rem;
+    font-size: 1.6rem;
+    box-shadow: 2px 1px 10px 1px rgba(0, 69, 38, 0.69);
+}
+.book_cover--title{
+    font-size: 1.8rem;
+}
+.book_cover--title,
+.book_cover--author{
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.toggle_read,
+.delete_btn{
+    height: 45px;
+    width: 150px;
+    font-size: 1.6rem;
+    border-radius: 10px;
+}
+.read{
+    color: rgb(255, 255, 255);
+    background:rgb(0, 230, 118);
+    box-shadow: none;
+    content: "Read";
+}
+.nt-read{
+    background: white;
+    box-shadow: 0px 0px 5px 1px rgba(0, 153, 84,0.5);
+    color: rgb(0, 28, 16);
+}
+.delete_btn{
+    background: #fd1111;
+    color: rgb(255, 255, 255);
+}
+.modal-form{
+    display: none;
+    z-index: 3;
+    position: absolute;
+    top:17%;
+    left: 40%;
+    border-radius: 15px;
+    box-shadow: 2px 1px 10px 1px rgb(0, 69, 38);
+    width:350px;
+    height: 460px;
+    padding:2.5rem;
+
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(105px);
+    transition: transform 104s ease-in;
+}
+.form-icon{
+    width:28px;
+}
+.open{
+    opacity: 0.5;
+    
+}
+input{
+    width:100%;
+    height: 4rem;
+    font-size: 2rem;
+    border-top :none;
+    border-left: none;
+    border-right: none;
+    background: rgb(255, 255, 255);
+    outline: none;
+    /* filter: blur(0) */
+}
+input::placeholder{
+    font-size: 2rem;
+}
+input:focus{
+    border:none;
+}
+label{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 3rem;
+}
+.add_book{
+    border: none;
+    margin: auto;
+    border-radius: 15px;
+    background-color: rgb(0, 153, 84);
+    width: 144px;
+    height: 48px;
+    color: rgb(255, 255, 255);
+}
+.add_book:hover{
+    transform: scale(1.1)
+}
+/* .book_shelf{
+} */
+footer{
+    width: 100%;
+    height:7vh;
+    padding : 1rem 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    background: rgb(0, 69, 38);
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font added -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./icons/library.png" type="image/icon" size="32x32">
+    <title>Odin Library</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class ="logo">
+                <p class="logo_text">
+                    Toshokan
+                </p>
+                <img  class="logo_img" src="./icons/library.png" alt="library icon">              
+            </div>
+            <div class="no_book"></div>
+            <div class="add-book">
+                <button id="create-book-button" class="create_button" class="add_book">
+                    <p>New Book</p>
+                    <img class="add_icon" src="./icons/add.png" alt="add_icon">
+                </button>
+            </div>
+        </nav>
+        <h1>Books</h1>
+    </header>
+    <main>
+        <div class="modal-form">
+            <form method="get" id="book-form">
+                <h2>New Book</h2>
+                <label for="author">
+                    <img class="form-icon" src="./icons/user.png" alt="Book author">
+                    <input id="author" name="author" type="text" placeholder="Author" required>
+                </label>
+                <br>
+                <label for="title">
+                    <img class="form-icon"  src="./icons/open-book.png" alt="book title">
+                    <input id="title" name="title" type="text" placeholder="Title" required>
+                </label>
+                <br>
+                <label for="numpages">
+                    <img class="form-icon"  src="./icons/hashtag.png" alt="book number of pages">
+                    <input  name="pages"id="numpages" type="number" placeholder="Number of pages" required>
+                </label>
+                <br>
+                <label for="add-book">
+                    <input class="add_book" id="add-book" type="submit" value="Add Book">
+                </label>
+            </form>
+        </div>
+        <div class="book_shelf">
+            <div class="book">
+                <div class="book_cover">
+                    <p id="book-title" class="book_cover--title">The Last Of Us</p>
+                    <p id="append-phrase" class="book_cover--phrase">by</p>
+                    <p id="book-author" class="book_cover--author">Alice Cooper</p>
+                    <p id="book-page" class="book_cover--pages">Number of Pages: 345</p>
+                </div>
+                <button id="read-btn" class="toggle_read read nt-read">
+                    <p>
+                        <span class="read-text">Read</span>
+                        <span class="not-read-text"></span>
+                    </p>
+                </button>
+                <button id="delete-btn" class="delete_btn">
+                    <span>Delete</span>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer_text">
+            Copyright © 2023 CodingNekochan
+        </p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

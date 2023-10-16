@@ -143,7 +143,6 @@ button{
     color: rgb(255, 255, 255);
     background:rgb(0, 230, 118);
     box-shadow: none;
-    content: "Read";
 }
 .nt-read{
     background: white;
